@@ -1,9 +1,9 @@
-#include "../include/phoneme.h"
+#include "../include/Phoneme.h"
 
-phoneme::phoneme(/* args */)
+Phoneme::Phoneme(/* args */)
 {
 }
 
-phoneme::~phoneme()
+Phoneme::~Phoneme()
 {
 }

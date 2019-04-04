@@ -1,14 +1,14 @@
-#ifndef phoneme_h
+#ifndef Phoneme_h
 
-class phoneme
+class Phoneme
 {
 private:
     /* data */
 public:
-    phoneme(/* args */);
-    ~phoneme();
+    Phoneme(/* args */);
+    ~Phoneme();
 };
 
-#endif // !phoneme_h
+#endif // !Phoneme_h
 
 
