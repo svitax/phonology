@@ -20,8 +20,9 @@
 */
 
 #include <iostream>
+#include "../include/Phoneme.h"
 
 int main() {
     std::cout << "Hello Easy C++ project!" << std::endl;
-
+    Phoneme c;
 }
