@@ -8,6 +8,9 @@ private:
     /* data */
     std::string xsampa_code;
     std::string ipa_hex_unicode;
+    bool cons, son, syll, labial, round, coronal, ant, dist, dorsal,
+    high, low, back, tense, pharyngeal, atr, voice, sg, cg, cont,
+    strident, lateral, del_rel, nasal;
 
 public:
     Phoneme();

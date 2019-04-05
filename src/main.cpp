@@ -23,7 +23,11 @@
 #include "../include/Phoneme.h"
 
 int main() {
-    std::cout << "Hello Easy C++ project!" << std::endl;
+    std::cout << "Input your phoneme here" << std::endl;
+    std::string code;
+    std::cin >> code;
     Phoneme c;
-    std::string test = c.get_xsampa_code;
+    c.set_xsampa_code(code);
+    std::string test = c.get_xsampa_code();
+    std::cout << test << std::endl;
 }
