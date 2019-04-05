@@ -25,23 +25,21 @@
 #include <cassert>
 #include "../include/Phoneme.h"
 
-void GetPower();
-
-void GetPower() {
-    std::cout << "hey" << std::endl;
-}
-
 int main() {
-    std::cout << "Input your phoneme here" << std::endl;
-    std::string code;
-    std::cin >> code;
-    Phoneme c;
+    // std::cout << "Input your phoneme here" << std::endl;
+    // std::string code;
+    // std::cin >> code;
 
-    GetPower();
+    Phoneme p;
+    CoronalObstruent co1;
+    CoronalObstruent co2(true, false);
 
-    c.set_xsampa_code(code);
-    std::string test = c.get_xsampa_code();
-    std::cout << test << std::endl;
+    std::cout << co1.get_coronal() << std::endl;
+    std::cout << co2.get_coronal() << std::endl << std::endl;
+
+    std::cout << co1.get_dist() << std::endl;
+    std::cout << co2.get_dist() << std::endl;
+
 
     return 0;
 }
