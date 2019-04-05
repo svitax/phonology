@@ -25,4 +25,5 @@
 int main() {
     std::cout << "Hello Easy C++ project!" << std::endl;
     Phoneme c;
+    std::string test = c.get_xsampa_code;
 }
