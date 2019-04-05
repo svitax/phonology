@@ -31,15 +31,6 @@ int main() {
     // std::cin >> code;
 
     Phoneme p;
-    CoronalObstruent co1;
-    CoronalObstruent co2(true, false);
-
-    std::cout << co1.get_coronal() << std::endl;
-    std::cout << co2.get_coronal() << std::endl << std::endl;
-
-    std::cout << co1.get_dist() << std::endl;
-    std::cout << co2.get_dist() << std::endl;
-
 
     return 0;
 }

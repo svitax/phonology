@@ -8,14 +8,16 @@ private:
     /* data */
     std::string xsampa_code;
     std::string ipa_hex_unicode;
-    bool cons, son, syll, labial, coronal, dorsal,pharyngeal, voice, 
-    sg, cg, cont, strident, lateral, del_rel, nasal;
+    bool cons, son, syll, labial, round, coronal, ant, dist, dorsal,
+    high, low, back, tense, pharyngeal, atr, voice, sg, cg, cont, 
+    strident, lateral, del_rel, nasal;
 
 public:
 
     Phoneme(): xsampa_code(""), ipa_hex_unicode(""), cons(false), son(false),
-    syll(false), labial(false), coronal(false), dorsal(false), pharyngeal(false), 
-    voice(false), sg(false), cg(false), cont(false), strident(false), lateral(false), 
+    syll(false), labial(false), round(false), coronal(false), ant(false), dist(false), 
+    dorsal(false), high(false), low(false), back(false), tense(false), pharyngeal(false), 
+    atr(false), voice(false), sg(false), cg(false), cont(false), strident(false), lateral(false), 
     del_rel(false), nasal(false) {}
 
     ~Phoneme() {}
@@ -26,9 +28,17 @@ public:
     void set_son(const bool &b) {son = b;}
     void set_syll(const bool &b) {syll = b;}
     void set_labial(const bool &b) {labial = b;}
+    void set_round(const bool &b) {round = b;}
     void set_coronal(const bool &b) {coronal = b;}
+    void set_ant(const bool &b) {ant = b;}
+    void set_dist(const bool &b) {dist = b;}
     void set_dorsal(const bool &b) {dorsal = b;}
+    void set_high(const bool &b) {high = b;}
+    void set_low(const bool &b) {low = b;}
+    void set_back(const bool &b) {back = b;}
+    void set_tense(const bool &b) {tense = b;}
     void set_pharyngeal(const bool &b) {pharyngeal = b;}
+    void set_atr(const bool &b) {atr = b;}
     void set_voice(const bool &b) {voice = b;}
     void set_sg(const bool &b) {sg = b;}
     void set_cg(const bool &b) {cg = b;}
@@ -44,9 +54,17 @@ public:
     bool get_son() const {return son;}
     bool get_syll() const {return syll;}
     bool get_labial() const {return labial;}
+    bool get_round() const {return round;}
     bool get_coronal() const {return coronal;}
+    bool get_ant() const {return ant;}
+    bool get_dist() const {return dist;}
     bool get_dorsal() const {return dorsal;}
+    bool get_high() const {return high;}
+    bool get_low() const {return low;}
+    bool get_back() const {return back;}
+    bool get_tense() const {return tense;}
     bool get_pharyngeal() const {return pharyngeal;}
+    bool get_atr() const {return atr;}
     bool get_voice() const {return voice;}
     bool get_sg() const {return sg;}
     bool get_cg() const {return cg;}
@@ -58,29 +76,4 @@ public:
     
 };
 
-class CoronalObstruent : public Phoneme
-{
-private:
-    bool m_ant, m_dist;
-public:
-    CoronalObstruent(): m_ant(false), m_dist(false) {set_coronal(true);}
-
-    ~CoronalObstruent() {}
-
-    CoronalObstruent(const bool &dist, const bool &ant) {
-        set_coronal(true);
-        m_dist = dist;
-        m_ant = ant;
-    }
-
-    void set_ant(const bool &b) {m_ant = b;}
-    void set_dist(const bool &b) {m_dist = b;}
-
-    bool get_ant() const {return m_ant;}
-    bool get_dist() const {return m_dist;}
-
-};
-
 #endif // !Phoneme_h
-
-
