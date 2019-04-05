@@ -12,6 +12,8 @@
         IPA and X-SAMPA codes
         input X-SAMPA and IPA codes, create corresponding 
     TODO:
+     create consonant and vowel classes that inherit place features (round, high, low, back, tense, atr)
+    TODO:
     - Minimal and near-minimal pair finder from a dataset
     TODO:
     - Compiler for local environments from a dataset
@@ -20,14 +22,26 @@
 */
 
 #include <iostream>
+#include <cassert>
 #include "../include/Phoneme.h"
+
+void GetPower();
+
+void GetPower() {
+    std::cout << "hey" << std::endl;
+}
 
 int main() {
     std::cout << "Input your phoneme here" << std::endl;
     std::string code;
     std::cin >> code;
     Phoneme c;
+
+    GetPower();
+
     c.set_xsampa_code(code);
     std::string test = c.get_xsampa_code();
     std::cout << test << std::endl;
+
+    return 0;
 }
